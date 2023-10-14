@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <title>JavaScript Background Color Switcher</title>
+
+
+    <style>
+
+
+html {
+  margin: 0;
+}
+
+body{
+  background-color: skyblue;
+
+color: black;  
+}
+
+
+
+span {
+  display: block;
+}
+.canvas {
+  margin: 100px auto 100px;
+  width: 80%;
+  text-align: center;
+}
+
+.button {
+  width: 100px;
+  height: 100px;
+  border: solid black 2px;
+  display: inline-block;
+}
+
+#grey {
+  background: grey;
+}
+
+#white {
+  background: white;
+}
+#lime {
+  background: lime;
+}
+#yellow {
+  background: yellow;
+}
+
+
+#purple {
+  background: purple;
+}
+
+
+#red {
+  background: red;
+}
+
+
+.button{
+  cursor: pointer;
+}
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+
+      >
+    </nav>
+    <div class="canvas">
+      <!-- <a
+        style="
+          background-color: #fff;
+          padding: 10px 30px;
+          border-radius: 8px;
+          color: #212121;
+          text-decoration: none;
+          border: 2px solid #212121;
+        "
+        href="../index.html"
+        >Back to Home Page</a
+      > -->
+      <h1 id="head2" >Color Scheme Switcher</h1>
+      <span class="button" id="grey"></span>
+      <span class="button" id="white"></span>
+      <span class="button" id="lime"></span>
+      <span class="button" id="yellow"></span>
+      <span class="button" id="purple"></span>
+      <span class="button" id="red"></span>
+
+      <h1 id="head1" >  </h1>
+
+      <h3 id="head3" >
+        Try clicking on one of the colors above
+        to change the background color of this page
+      </h3>
+    </div>
+    <script >
+
+let body = document.querySelector('body');
+
+let button = document.querySelectorAll(".button")
+
+let head1 = document.getElementById("head1");
+
+
+let head2 = document.getElementById("head2");
+
+
+let head3 = document.getElementById("head3");
+
+button.forEach( (el) => {
+
+  el.addEventListener("click", (e) => {
+
+    if (e.target.id === "grey") {
+
+      body.style.backgroundColor = e.target.id 
+
+
+      head1.innerHTML = ` Your background color is now ${e.target.id}`
+
+      head1.style.color = "white"
+      
+    }
+
+    else if (e.target.id === "white") {
+
+body.style.backgroundColor = e.target.id 
+head1.innerHTML = ` Your background color is now ${e.target.id}`
+head1.style.color = "black"
+
+}
+
+else if (e.target.id === "lime") {
+
+body.style.backgroundColor = e.target.id 
+head1.innerHTML = ` Your background color is now ${e.target.id}`
+head1.style.color = "blue"
+
+}
+
+else if (e.target.id === "yellow") {
+
+body.style.backgroundColor = e.target.id 
+head1.innerHTML = ` Your background color is now ${e.target.id}`
+head1.style.color = "black"
+
+}
+
+else if (e.target.id === "purple") {
+
+body.style.backgroundColor = e.target.id 
+head1.innerHTML = ` Your background color is now ${e.target.id}`
+head1.style.color = "limegreen"
+
+}
+
+
+else if (e.target.id === "red") {
+
+body.style.backgroundColor = e.target.id 
+head1.innerHTML = ` Your background color is now ${e.target.id}`
+head1.style.color = "blue"
+
+}
+
+
+
+
+
+
+  } )
+
+} )
+
+
+
+ setTimeout(() => {
+   head2.innerHTML = `
+   Color Scheme Switcher by Rup
+ `
+ }, 2000);
+  
+
+
+setTimeout(() => {
+  head3.innerHTML = `Try one by clicking into it`
+}, 3000);
+
+
+
+    </script>
+  </body>
+</html>
